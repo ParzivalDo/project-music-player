@@ -13,7 +13,6 @@ const playRepeat = document.querySelector(".play-repeat");
 let isPlaying = true;
 let indexSong = 0;
 let isRepeat = false;
-// const musics = ["holo.mp3", "summer.mp3", "spark.mp3", "home.mp3"];
 const musics = [
   {
     id: 1,
@@ -30,13 +29,6 @@ const musics = [
       "https://scontent.fhan15-2.fna.fbcdn.net/v/t39.30808-1/310113171_388893960126794_6311075068310824141_n.jpg?stp=dst-jpg_p200x200&_nc_cat=110&ccb=1-7&_nc_sid=fe8171&_nc_ohc=8vC3q5v7M1IAX8yQFMB&_nc_ht=scontent.fhan15-2.fna&oh=00_AfBIudOGuBax1OPxcfzCjg5Px1hLcNDI9e139blIz6VG7A&oe=65068BFF",
   },
 ];
-/**
- * Music
- * id: 1
- * title: Holo
- * file: holo.mp3
- * image: unsplash
- */
 let timer;
 let repeatCount = 0;
 playRepeat.addEventListener("click", function () {
@@ -128,5 +120,6 @@ function init(indexSong) {
   musicImage.setAttribute("src", musics[indexSong].image);
   musicName.textContent = musics[indexSong].title;
 }
+
 displayTimer();
 init(indexSong);
